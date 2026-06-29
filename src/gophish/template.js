@@ -1,4 +1,4 @@
-import { gophishRequest } from './request.js';
+import { gophishRequest } from './client.js';
 
 async function createTemplate(input){
     const result = await gophishRequest('/api/templates/', {
