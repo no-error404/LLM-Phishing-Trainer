@@ -1,6 +1,6 @@
 import { gophishRequest } from './client.js';
 
-export async function createCampaign(input) {
+async function createCampaign(input) {
     const result = await gophishRequest('/api/campaigns', {
         method: 'POST',
         body: JSON.stringify({

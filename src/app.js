@@ -9,6 +9,7 @@ import morgan from 'morgan';
 
 // [A1] Import your health router once you create it
 import healthRouter from './routes/health.routes.js';
+import campaignsRouter from './routes/campaigns.routes.js';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(morgan(':date :method :url :status :response-time ms'));
 
 // [A4] Mount the health router at /health
 app.use('/health', healthRouter);
+app.use('/campaigns', campaignsRouter);
 
 // [A5] Register a catch-all error handler
 // Remember: error handlers take (err, req, res, next)
